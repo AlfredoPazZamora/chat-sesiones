@@ -29,7 +29,8 @@ router.post('/auth', (req, res) => {
                 req.session.loggedin = true 
                 req.session.usuario = usuario;
 
-                res.redirect('/chat');
+                // res.redirect('/chat');
+                res.send('AQUI VA LA DIRECCIÓN A CHAT')
             }else{
                 res.send('Usuario y contraseña incorrectos <br><br> si no tienes una cuenta puedes <a href="/registro">registrarte aquí</a>');
             }
